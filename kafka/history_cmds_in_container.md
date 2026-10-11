@@ -3,17 +3,9 @@
   --bootstrap-server shortlink-kafka:9092 \
   --create \
   --topic links.events \
-  --partitions 3 \
+  --partitions 100 \
   --replication-factor 1 \
   --config retention.ms=604800000
-
-# Увеличение количества партиций для наилучшего распараллеливания
-  <!-- /opt/kafka/bin/kafka-topics.sh \
-  --bootstrap-server shortlink-kafka:9092 \
-  --alter \
-  --topic links.events \
-  --partitions 100 -->
-
 
 
 
